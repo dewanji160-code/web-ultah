@@ -3,34 +3,37 @@
 
 <head>
 
-<link rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div>
+<div class="box">
 
 <h1>
 Happy Birthday ❤️
 </h1>
 
-<button onclick="halo()">
+<button onclick="surprise()">
 
 Discover Your Surprise
 
 </button>
 
+<p id="pesan"></p>
+
 </div>
 
 <script>
 
-function halo(){
+function surprise(){
 
-alert(
-"Semoga hari kamu indah ✨"
-)
+document
+.getElementById("pesan")
+.innerHTML=
+
+"🌸 Semoga semua impianmu tercapai ✨";
 
 }
 
@@ -39,4 +42,3 @@ alert(
 </body>
 
 </html>
-

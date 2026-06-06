@@ -1,10 +1,4 @@
 function surprise(){
-
-document.getElementById(
-"pesan"
-
-).innerHTML=
-
+document.getElementById("pesan").innerHTML =
 "🌸 Selamat ulang tahun ✨";
-
 }

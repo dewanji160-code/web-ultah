@@ -1,11 +1,12 @@
 body{
+
 margin:0;
 
 background:
 linear-gradient(
-180deg,
-#120015,
-#000
+to bottom,
+#140015,
+black
 );
 
 height:100vh;
@@ -19,86 +20,147 @@ align-items:center;
 overflow:hidden;
 
 color:white;
+
 }
 
-body::before{
-content:"🌸 🌸 🌸 🌸 🌸";
+.box{
 
-position:absolute;
+text-align:center;
 
-top:-50px;
-
-left:0;
-
-width:100%;
-
-font-size:40px;
-
-animation:fall 10s linear infinite;
-
-opacity:0.6;
-}
-
-@keyframes fall{
-
-0%{
-transform:
-translateY(-100px);
-}
-
-100%{
-transform:
-translateY(120vh);
-}
+animation:
+muncul
+2s;
 
 }
 
 h1{
 
-font-size:60px;
+font-size:70px;
 
 animation:
-glow 2s infinite;
-
-}
-
-@keyframes glow{
-
-0%{
-opacity:.5;
-}
-
-50%{
-opacity:1;
-}
-
-100%{
-opacity:.5;
-}
+kedip
+2s infinite;
 
 }
 
 button{
 
-padding:16px 35px;
+padding:15px 30px;
 
 border:none;
 
-border-radius:40px;
+border-radius:50px;
 
-background:#ff6fb7;
+background:
+hotpink;
 
 cursor:pointer;
 
-font-size:20px;
+}
 
-transition:.4s;
+#pesan{
+
+margin-top:30px;
+
+font-size:30px;
+
+opacity:0;
+
+animation:
+none;
 
 }
 
-button:hover{
+#pesan:not(:empty){
+
+opacity:1;
+
+animation:
+fade
+2s;
+
+}
+
+body::before{
+
+content:
+"🌸 🌸 🌸 🌸 🌸 🌸";
+
+position:absolute;
+
+top:-100px;
+
+left:0;
+
+font-size:40px;
+
+width:100%;
+
+animation:
+jatuh
+8s linear infinite;
+
+}
+
+@keyframes jatuh{
+
+from{
 
 transform:
-scale(1.1);
+translateY(-100px);
+
+}
+
+to{
+
+transform:
+translateY(120vh);
+
+}
+
+}
+
+@keyframes kedip{
+
+50%{
+
+opacity:.5;
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes muncul{
+
+from{
+
+transform:
+scale(.5);
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
 
 }
